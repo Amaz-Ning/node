@@ -80,9 +80,12 @@ let write = function (fd, data) {
     })
 }
 let p = async () => {
+    console.log('开始写入')
     const fd = await open(`${__dirname}/source/b.txt`, 'w')
     await write(fd, '啊啊啊啊啊啊异步啊啊啊啊啊啊啊')
     console.log('写入完成')
 }
 p()
 console.log('正在执行')
+
+// async 函数优先执行异步操作之前的操作 或者说时await之前的操作
