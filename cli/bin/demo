@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+// 用来提供cli工具中的命令（通过解析argv 提供命令行工具）
+const program = require('commander');
+// init 和 refresh 都是命令 或者说是一个功能函数
+// 这里相当于定义了一个方法名 init 和参数 name
+// program.version(Version).command('init <name>', 'init project').command('refresh', 'refresh route')
+program.command('test <name>', '3131313131')
+program.parse(process.argv);

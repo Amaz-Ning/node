@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+const program = require('commander');
+// action相当于响应 当监测到调用init命令时，就直接找到bin中的init文件 执行响应中的方法
+program.action(programObject => {
+    const [name] = programObject.args
+    console.log(name);
+})
+program.parse(process.argv)
